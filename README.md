@@ -1,5 +1,5 @@
 # Overseerr-Cleaner
-Docker container and Python program to remove movies deleted form Plex from Overseerr
+Docker container and Python program to remove deleted Plex content from Overseerr
 
 # Setup
 
