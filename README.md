@@ -5,7 +5,7 @@ Docker container and Python program to remove deleted Plex content from Overseer
 
 ## Build Docker Image
 ```bash
-docker build -t overseerr-cleaner:latest .
+docker build -t andrewriggs/overseerr-cleaner:latest .
 ```
 
 ## Run Docker Container
@@ -18,5 +18,5 @@ docker run -d \
     -e PLEX_PORT=XXXXX \                        # (Optional) Plex port (e.g. 32400)
     -e INTERVAL=XXXXX \                         # (Optional) Interval seconds
     -v /path/to/overseerr/db:/overseerr-db \    # Path to Overseerr database folder
-    overseerr-cleaner:latest
+    andrewriggs/overseerr-cleaner:latest
 ```
