@@ -44,8 +44,12 @@ while True:
     # Get all plex content
     pelx_guid_lookup = {}
     for item in plex.library.all():
-        pelx_guid_lookup[item.guid] = item
-        pelx_guid_lookup.update({guid.id: item for guid in item.guids})
+        try:
+            pelx_guid_lookup[item.guid] = item
+            pelx_guid_lookup.update({guid.id: item for guid in item.guids})
+        except Exception as e:
+            print(f"Error: {e}")
+            pass
 
     # Connect to Overseerr Database
     conn = sqlite3.connect("overseerr-db/db.sqlite3")
